@@ -48,7 +48,6 @@
         .shlok { color: var(--gold); font-size: 1.6em; font-weight: bold; margin: 10px 0; }
         .shayari { font-size: 1.25em; line-height: 1.6; font-weight: bold; }
 
-        /* Countdown Style */
         #countdown { display: flex; justify-content: center; gap: 15px; font-weight: bold; color: var(--gold); font-size: 1.2em; margin-top: 10px; }
         #countdown div { background: rgba(0, 0, 0, 0.4); padding: 10px; border-radius: 10px; min-width: 60px; border: 1px solid var(--gold); }
 
@@ -78,7 +77,7 @@
                     <img src="https://t4.ftcdn.net/jpg/05/67/25/19/360_F_567251954_fv1O7TqBJYK5I5yIYcBjfGsukK04IGR9.jpg" class="ram-img-circle">  
                     
                     <div class="section">
-                        <img src="C:\Users\Hi\OneDrive\Desktop\Ramnavmi site alok\WhatsApp Image 2026-03-19 at 7.29.24 PM.jpeg" class="alok-img-circle">
+                        <img src="https://raw.githubusercontent.com/rishisharma12501-a11y/Ramnavmi-Alok/main/WhatsApp%20Image%202026-03-19%20at%207.29.24%20PM.jpeg" class="alok-img-circle" alt="Alok Kumar">
                         <div id="displayName" style="font-size: 2.5em; color: gold; font-weight: bold; text-shadow: 2px 2px 10px #000; min-height: 1.2em;"></div>
                     </div>
 
@@ -109,16 +108,21 @@
                     </p>
                 </div>
             </div>
-
             <div class="section">
+                <div class="card-3d">
+                    <p class="shlok">॥ मंगल भवन अमंगल हारी ॥</p>
+                    <p class="shayari">"राम जिनका नाम है, अयोध्या जिनका धाम है,<br>ऐसे रघुनंदन को, हमारा कोटि-कोटि प्रणाम है।"</p>
+                     <div class="section">
                 <div class="card-3d">
                     <p class="shayari">"जिनके मन में श्री राम हैं,<br>भाग्य में उनके वैकुण्ठ धाम है,<br>उनके चरणों में जिसने जीवन वार दिया,<br>संसार में उसका कल्याण है।"</p>
                 </div>
             </div>
+             <div class="section">
+                <div class="card-3d">
+                    <p class="shayari">"राम जी की ज्योति से नूर मिलता है,<br>सबके दिलों को सुरूर मिलता है,<br>जो भी जाता है राम के द्वार,<br>उसे कुछ न कुछ ज़रूर मिलता है।"</p>
 
             <div class="section">
                 <div class="card-3d">
-                    <p class="shayari">"राम जी की ज्योति से नूर मिलता है,<br>सबके दिलों को सुरूर मिलता है,<br>जो भी जाता है राम के द्वार,<br>उसे कुछ न कुछ ज़रूर मिलता है।"</p>
                     <a href="javascript:void(0)" class="share-btn" onclick="shareWhatsapp()">🚩 सबको भेजे </a>
                 </div>
             </div>
@@ -128,7 +132,7 @@
     </div>
 
     <script>
-        let userName = ""; // Global variable for name
+        let userName = "";
 
         function revealMagic() {
             document.getElementById('bg-music').play().catch(e => console.log("Music click needed"));
@@ -152,7 +156,6 @@
             window.open("https://api.whatsapp.com/send?text=" + encodeURIComponent(text), '_blank');
         }
 
-        // --- Rain Animation ---
         const canvas = document.getElementById('ram-canvas');
         const ctx = canvas.getContext('2d');
         canvas.width = window.innerWidth; canvas.height = window.innerHeight;
@@ -178,7 +181,6 @@
         }
         animate();
 
-        // --- Countdown Logic ---
         function startTimer() {
             const ramNavmiDate = new Date("March 26, 2026 00:00:00").getTime();
             setInterval(function() {
@@ -194,7 +196,6 @@
         }
         startTimer();
 
-        // Handle URL Name (Isse link wala naam show hoga bina input box ke)
         let params = new URLSearchParams(window.location.search);
         if(params.get('name')) {
             userName = params.get('name');
